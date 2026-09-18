@@ -25,7 +25,10 @@ body {
 }
 
 .product {
-    padding-left: 1.2rem;
+  padding: 20px;
+  background-color: white;
+  border-radius: 16px;
+  border: 1px solid #e2d6cc;
 }
 
 button {
@@ -139,4 +142,118 @@ nav a:focus-visible,
   width: 100%;
   max-width: 420px;
   border-radius: 18px;
+}
+#profil {
+    margin-top: 32px;
+    padding: 24px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+#profil h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.profil-container {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.profil-container .profile-image {
+    width: 260px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 16px;
+    flex-shrink: 0;
+}
+
+.profil-container p {
+    margin: 0;
+    line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+    .profil-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .profil-container .profile-image {
+        width: 100%;
+        height: auto;
+    }
+}
+.tentang-section {
+    margin-top: 32px;
+    padding: 28px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.tentang-section h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.tentang-container {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.tentang-container .profile-image {
+    width: 260px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 16px;
+    flex-shrink: 0;
+}
+
+.tentang-container p {
+    margin-top: 0;
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+
+.nilai-section {
+    margin-top: 32px;
+    padding: 28px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.nilai-section h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.komitmen-card {
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 16px;
+}
+
+.komitmen-card h3 {
+    margin-top: 0;
+}
+
+.komitmen-card p {
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+
+@media (max-width: 600px) {
+    .tentang-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tentang-container .profile-image {
+        width: 100%;
+        height: auto;
+    }
 }
