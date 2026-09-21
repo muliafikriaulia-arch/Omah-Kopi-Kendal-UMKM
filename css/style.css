@@ -204,8 +204,8 @@ nav a:focus-visible,
 }
 
 .tentang-container .profile-image {
-    width: 260px;
-    height: 180px;
+    width: 300px;
+    height: 420px;
     object-fit: cover;
     border-radius: 16px;
     flex-shrink: 0;
@@ -256,4 +256,110 @@ nav a:focus-visible,
         width: 100%;
         height: auto;
     }
+}
+
+.catalog-section,
+.gallery-section,
+.media-section {
+    margin-top: 32px;
+    padding: 28px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.catalog-section h1,
+.gallery-section h1,
+.media-section h2 {
+    margin-top: 0;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    margin-top: 24px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+caption {
+    padding: 12px;
+    font-weight: 700;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 14px;
+    border: 1px solid #ddd;
+    text-align: left;
+    vertical-align: top;
+}
+
+thead th {
+    background-color: #f5f5f5;
+}
+
+tbody th {
+    font-weight: 700;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.gallery-card {
+    margin: 0;
+    padding: 16px;
+    background-color: #f5f5f5;
+    border-radius: 16px;
+}
+
+.gallery-card img {
+    display: block;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.gallery-card figcaption {
+    margin-top: 12px;
+    line-height: 1.5;
+}
+
+.media-section {
+    margin-top: 32px;
+}
+
+.media-section audio {
+    width: 100%;
+    max-width: 600px;
+}
+
+@media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-card img {
+        height: auto;
+    }
+
+    th,
+    td {
+        padding: 10px;
+    }
+}
+.brand-logo {
+    display: block;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 100%;
 }
