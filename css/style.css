@@ -363,3 +363,86 @@ tbody th {
     object-fit: cover;
     border-radius: 100%;
 }
+
+#contactForm {
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+#contactForm label {
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#contactForm input,
+#contactForm select,
+#contactForm textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+#contactForm fieldset {
+  margin-top: 15px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+#contactForm {
+    margin-top: 24px;
+}
+
+#contactForm label {
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+#contactForm input,
+#contactForm select,
+#contactForm textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+#contactForm fieldset {
+    margin-top: 20px;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+}
+
+#contactForm fieldset label {
+    display: inline;
+    margin: 0 16px 0 4px;
+    font-weight: 400;
+}
+
+#contactForm fieldset input {
+    width: auto;
+}
+
+#contactForm button {
+    margin-top: 20px;
+}
+
+.kontaksingkat-section {
+    margin-top: 32px;
+    padding: 28px;
+    background-color: white;
+    border-radius: 20px;
+}
