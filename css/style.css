@@ -1,8 +1,56 @@
+:root {
+    --color-primary: #2f6f4e;
+    --color-primary-strong: #1f5138;
+    --color-text: #1f2a24;
+    --color-muted: #60a5fa;
+    --color-surface: #fffdf8;
+    --color-border: #d8ddd7;
+    --color-focus: #1d4ed8;
+
+    --space-1: 0.5rem;
+    --space-2: 0.75rem;
+    --space-3: 1rem;
+    --space-4: 1.5rem;
+
+    --radius-sm: 0.5rem;
+    --radius-md: 0.875rem;
+}
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
-    color: black;
-    background-color: aliceblue;
+    color: var(--color-text);
+    background-color: var(--color-surface);
     font-family: Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: 1.75rem;
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: 1.35rem;
+    line-height: 1.2;
+}
+
+h3 {
+    font-size: 1.1rem;
+    line-height: 1.3;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+ul {
+    font-size: 0.95rem;
+    line-height: 1.5;
 }
 
 .page {
@@ -13,8 +61,8 @@ body {
 
 .hero {
     padding: 36px;
-    color: white;
-    background-color: brown;
+    color: var(--color-surface);
+    background-color: var(--color-primary);
     border-radius: 24px;
 }
 
@@ -22,21 +70,22 @@ body {
     margin: 0 0 8px;
     letter-spacing: 0.14cm;
     text-transform: uppercase;
+    color: var(--color-muted);
 }
 
 .product {
-  padding: 20px;
-  background-color: white;
-  border-radius: 16px;
-  border: 1px solid #e2d6cc;
+  padding: var(--space-3);
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
 }
 
 button {
     padding: 12px 18px;
-    color: black;
+    color: var(--color-text);
     font-weight: 700;
     cursor: pointer;
-    background-color: orange;
+    background-color: var(--color-primary);
     border: 0;
     border-radius: 999px;
 }
@@ -71,6 +120,7 @@ button {
 
 .info-card p {
     line-height: 1.6;
+    color: var(--color-muted);
 }
 
 
@@ -88,12 +138,12 @@ button {
   align-items: center;
   gap: 16px;
   padding: 16px 24px;
-  background: white;
-  border-bottom: 1px solid #ddd;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .brand {
-  color: brown;
+  color: var(--color-primary);
   font-weight: 800;
   text-decoration: none;
 }
@@ -105,14 +155,15 @@ nav {
 }
 
 nav a {
-  color: brown;
+  color: var(--color-primary);
   font-weight: 700;
 }
 
 nav a:focus-visible,
-.skip-link:focus-visible {
-  outline: 3px solid orange;
-  outline-offset: 4px;
+.skip-link:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 4px;
 }
 
 .skip-link {
@@ -120,8 +171,8 @@ nav a:focus-visible,
   left: 10px;
   top: -50px;
   padding: 10px 14px;
-  background: white;
-  color: black;
+  background: var(--color-surface);
+  color: var(--color-text);
   font-weight: 700;
   text-decoration: none;
 }
@@ -133,8 +184,8 @@ nav a:focus-visible,
 .site-footer {
   margin-top: 32px;
   padding: 24px;
-  background: brown;
-  color: white;
+  background: var(--color-primary-strong);
+color: var(--color-surface);
   text-align: center;
 }
 
@@ -146,7 +197,7 @@ nav a:focus-visible,
 #profil {
     margin-top: 32px;
     padding: 24px;
-    background-color: white;
+    background-color: var(--color-surface);
     border-radius: 20px;
 }
 
@@ -188,7 +239,7 @@ nav a:focus-visible,
 .tentang-section {
     margin-top: 32px;
     padding: 28px;
-    background-color: white;
+   background-color: var(--color-surface);
     border-radius: 20px;
 }
 
@@ -221,7 +272,7 @@ nav a:focus-visible,
 .nilai-section {
     margin-top: 32px;
     padding: 28px;
-    background-color: white;
+    background-color: var(--color-surface);
     border-radius: 20px;
 }
 
@@ -263,7 +314,7 @@ nav a:focus-visible,
 .media-section {
     margin-top: 32px;
     padding: 28px;
-    background-color: white;
+    background-color: var(--color-surface);
     border-radius: 20px;
 }
 
@@ -293,7 +344,7 @@ caption {
 th,
 td {
     padding: 14px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--color-border);
     text-align: left;
     vertical-align: top;
 }
@@ -434,6 +485,7 @@ tbody th {
 
 #contactForm fieldset input {
     width: auto;
+    margin-right: var(--space-1);
 }
 
 #contactForm button {
@@ -445,4 +497,36 @@ tbody th {
     padding: 28px;
     background-color: white;
     border-radius: 20px;
+}
+
+#preview {
+    margin-top: 24px;
+    padding: 20px;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    line-height: 1.7;
+    white-space: pre-wrap;
+    font-family: Arial, sans-serif;
+}
+
+#preview-title {
+    margin-top: 28px;
+    margin-bottom: 10px;
+}
+
+#preview-title {
+    margin-top: 28px;
+    margin-bottom: 10px;
+}
+
+#preview {
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #e2d6cc;
+    border-radius: 16px;
+    line-height: 1.7;
+    white-space: pre-wrap;
+    font-family: Arial, sans-serif;
 }

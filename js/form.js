@@ -1,14 +1,22 @@
-const contactForm = document.querySelector("#contactForm");
+const form = document.querySelector("#contactForm");
 
-contactForm.addEventListener("submit", (event) => {
+const preview = document.querySelector("#preview");
+
+
+form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  if (!contactForm.checkValidity()) {
-    contactForm.reportValidity();
-    return;
-  }
+  const data = new FormData(form);
 
-  console.log("Form kontak Omah Kopi Kendal berhasil dikirim.");
+  preview.textContent = [
+    "Nama: " + data.get("nama"),
+    "Email: " + data.get("email"),
+    "Nomor WhatsApp: " + data.get("telepon"),
+    "Paket: " + data.get("paket"),
+    "Topik: " + data.get("topik"),
+    "Pesan: " + data.get("pesan"),
+  ].join("\n");
 
-  alert("Terima kasih. Pesan Anda berhasil dikirim.");
+  previewMessage.textContent =
+  "Pesan dari " + data.get("nama") + " siap ditinjau.";
 });
