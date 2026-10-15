@@ -64,8 +64,29 @@ ul {
     color: var(--color-surface);
     background-color: var(--color-primary);
     border-radius: 24px;
+    
 }
 
+.hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    grid-template-areas: "content image";
+    align-items: center;
+    gap: 24px;
+}
+
+.hero-content {
+    grid-area: content;
+}
+
+.hero-image {
+    grid-area: image;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    justify-self: end;
+    border-radius: var(--radius-md);
+}
 .eyebrow {
     margin: 0 0 8px;
     letter-spacing: 0.14cm;
@@ -94,7 +115,7 @@ button {
 .info-section {
     margin-top: 32px;
     padding: 24px;
-    background-color: white;
+    background-color: var(--color-surface);
     border-radius: 20px;
 }
 
@@ -110,7 +131,7 @@ button {
 .info-card {
     flex: 1;
     padding: 20px;
-    background-color: #f5f5f5;
+    background-color: white;
     border-radius: 16px;
 }
 
@@ -120,7 +141,7 @@ button {
 
 .info-card p {
     line-height: 1.6;
-    color: var(--color-muted);
+    color: var(--color-primary-strong);
 }
 
 
@@ -133,6 +154,7 @@ button {
 .site-header {
   position: sticky;
   top: 0;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -150,6 +172,7 @@ button {
 
 nav {
   display: flex;
+  align-items: center;
   gap: 12px;
   flex-wrap: wrap;
 }
@@ -185,7 +208,7 @@ button:focus-visible {
   margin-top: 32px;
   padding: 24px;
   background: var(--color-primary-strong);
-color: var(--color-surface);
+  color: var(--color-surface);
   text-align: center;
 }
 
@@ -499,6 +522,27 @@ tbody th {
     border-radius: 20px;
 }
 
+.kontaksingkat-section a {
+    display: inline-block;
+    padding: 8px 14px;
+    color: var(--color-surface);
+    background-color: var(--color-primary);
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.kontaksingkat-section a:hover {
+    background-color: var(--color-primary-strong);
+}
+
+.kontaksingkat-section a:focus-visible {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 3px;
+}
+
 #preview {
     margin-top: 24px;
     padding: 20px;
@@ -529,4 +573,87 @@ tbody th {
     line-height: 1.7;
     white-space: pre-wrap;
     font-family: Arial, sans-serif;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+}
+
+.product-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-3);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+.product-badge {
+    position: absolute;
+    top: var(--space-2);
+    right: var(--space-2);
+    padding: 0.25rem var(--space-2);
+    color: var(--color-primary-strong);
+    font-size: 0.875rem;
+    font-weight: 800;
+    background: #fef3c7;
+    border-radius: 999px;
+}
+
+.card-actions {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.card-actions a {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.card-actions a.button {
+    color: var(--color-surface);
+    background-color: var(--color-primary);
+}
+
+.card-actions a.button:hover {
+    background-color: var(--color-primary-strong);
+}
+
+.card-actions a:not(.button) {
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+}
+
+.card-actions a:not(.button):hover {
+    color: var(--color-surface);
+    background-color: var(--color-primary);
+}
+
+.card-actions a:focus-visible {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 3px;
+}
+
+.form-actions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.form-actions button {
+    margin-top: 0;
 }
