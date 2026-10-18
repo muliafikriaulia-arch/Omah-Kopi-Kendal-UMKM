@@ -721,3 +721,18 @@ img {
 .page {
     padding-inline: clamp(1rem, 3vw, 2rem);
 }
+
+.product-card {
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.product-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+}
