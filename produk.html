@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Katalog Produk - Kopi Omah Kendal</title>
   <link rel="stylesheet" href="css/style.css" />
+  <script src="js/app.js" defer></script>
 </head>
 
 <body>
@@ -41,7 +42,6 @@
       </p>
       <section aria-labelledby="produk-pilihan-title">
         <h2 id="produk-pilihan-title">Produk Pilihan</h2>
-
         <div class="product-grid">
           <article class="product-card">
             <span class="product-badge">Terlaris</span>
@@ -111,6 +111,17 @@
             </div>
           </article>
         </div>
+        <section class="section" aria-labelledby="produk-dinamis-title">
+        <div class="section-header">
+          <p class="eyebrow">Data JavaScript</p>
+          <h2 id="produk-dinamis-title">Produk dari Data Lokal</h2>
+          <p id="produk-ringkasan">
+            Data produk akan dimuat melalui JavaScript.
+          </p>
+        </div>
+
+  <div id="produk-dinamis" class="js-product-grid"></div>
+</section>
       </section>
 
 
@@ -136,7 +147,7 @@
               <th scope="row">Kopi Robusta Kendal</th>
               <td>Kopi Lokal</td>
               <td>Rp22.000</td>
-              <td>Tersedia</td>
+              <td>Stok Habis</td>
               <td>Kopi dengan cita rasa khas Robusta Kendal.</td>
             </tr>
 
@@ -152,7 +163,7 @@
               <th scope="row">Cold Brew Aren</th>
               <td>Kopi Dingin</td>
               <td>Rp22.000</td>
-              <td>Tersedia</td>
+              <td>Stok Terbatas</td>
               <td>Cold brew dengan tambahan rasa gula aren.</td>
             </tr>
 
