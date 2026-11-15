@@ -6,6 +6,7 @@
   <title>Tentang Omah Kopi Kendal</title>
   <link rel="stylesheet" href="css/style.css" />
   <script src="js/app.js" defer></script>
+  <script src="js/nav.js" defer></script>
 </head>
 
 <body>
@@ -22,7 +23,11 @@
     />
   </a>
 
-  <nav aria-label="Navigasi utama">
+  <button class="menu-toggle" type="button" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="primary-navigation">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav" id="primary-navigation" aria-label="Navigasi utama">
     <a href="index.html">Beranda</a>
     <a href="tentang.html" aria-current="page">Tentang Kami</a>
     <a href="produk.html">Produk</a>
@@ -104,4 +109,4 @@
     <p>&copy; 2026 Omah Kopi Kendal. Semua hak dilindungi.</p>
   </footer>
 </body>
-</html>   
+</html>     
