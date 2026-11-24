@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="css/style.css" />
 <script src="js/app.js" defer></script>
 <script src="js/nav.js" defer></script>
+<script src="js/form.js" defer></script>
+<script src="js/newsletter.js" defer></script>
 </head>
 
 <body>
@@ -36,114 +38,157 @@
   </header>
 
  <main class="page">
-   <section class="info-section" aria-labelledby="kontak-title">
-  <h2 id="kontak-title">Kontak Omah Kopi Kendal</h2>
+  <section class="info-section" aria-labelledby="kontak-title">
+    <h2 id="kontak-title">Kontak Omah Kopi Kendal</h2>
 
-  <p>
-    Silakan isi formulir untuk menghubungi Omah Kopi Kendal.
-  </p>
+    <p>
+      Silakan isi formulir untuk menghubungi Omah Kopi Kendal.
+      Gunakan data dummy untuk latihan; data hanya dipreview di browser ini.
+    </p>
 
-  <form id="contactForm">
+    <form id="contactForm" action="#" method="post" novalidate>
 
-    <label for="nama">Nama lengkap</label>
-    <input
-      type="text"
-      id="nama"
-      name="nama"
-      required
-      minlength="3"
-    />
+      <div class="field">
+        <label for="nama">Nama lengkap</label>
+        <input
+          type="text"
+          id="nama"
+          name="nama"
+          autocomplete="name"
+          required
+          minlength="3"
+          aria-describedby="nama-error"
+        />
+        <p id="nama-error" class="field-error" aria-live="polite"></p>
+      </div>
 
-    <label for="email">Email</label>
-    <input
-      type="email"
-      id="email"
-      name="email"
-      required
-    />
+      <div class="field">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          autocomplete="email"
+          required
+          aria-describedby="email-error"
+        />
+        <p id="email-error" class="field-error" aria-live="polite"></p>
+      </div>
 
-    <label for="telepon">Nomor WhatsApp</label>
-    <input
-      type="tel"
-      id="telepon"
-      name="telepon"
-    />
-  <fieldset>
-   <legend>Waktu yang nyaman dihubungi</legend>
-      <input type="radio" id="waktu-pagi" name="waktu" value="pagi" />
-      <label for="waktu-pagi">Pagi</label>
+      <div class="field">
+        <label for="telepon">Nomor WhatsApp (opsional)</label>
+        <input
+          type="tel"
+          id="telepon"
+          name="telepon"
+          autocomplete="tel"
+          inputmode="tel"
+          placeholder="081234567890"
+          pattern="08[0-9]{8,11}"
+          aria-describedby="telepon-hint telepon-error"
+        />
+        <p id="telepon-hint" class="field-hint">Diawali 08, terdiri dari 10-13 digit tanpa spasi.</p>
+        <p id="telepon-error" class="field-error" aria-live="polite"></p>
+      </div>
 
-      <input type="radio" id="waktu-siang" name="waktu" value="siang" />
-      <label for="waktu-siang">Siang</label>
+      <fieldset>
+        <legend>Waktu yang nyaman dihubungi (opsional)</legend>
+        <input type="radio" id="waktu-pagi" name="waktu" value="pagi" />
+        <label for="waktu-pagi">Pagi</label>
 
-      <input type="radio" id="waktu-sore" name="waktu" value="sore" />
-      <label for="waktu-sore">Sore</label>
-  </fieldset>
+        <input type="radio" id="waktu-siang" name="waktu" value="siang" />
+        <label for="waktu-siang">Siang</label>
 
-    <label for="paket">Paket yang diminati</label>
-    <select id="paket" name="paket" required>
-      <option value="">Pilih paket</option>
-      <option value="robusta">Kopi Robusta Kendal</option>
-      <option value="tubruk">Kopi Tubruk Signature</option>
-      <option value="arabica">Kopi Arabica Kendal</option>
-      <option value="cold-brew">Cold Brew Aren</option>
-    </select>
+        <input type="radio" id="waktu-sore" name="waktu" value="sore" />
+        <label for="waktu-sore">Sore</label>
+      </fieldset>
 
-    <fieldset>
-      <legend>Topik pertanyaan</legend>
+      <div class="field">
+        <label for="paket">Paket yang diminati</label>
+        <select id="paket" name="paket" required aria-describedby="paket-error">
+          <option value="">Pilih paket</option>
+          <option value="robusta">Kopi Robusta Kendal</option>
+          <option value="tubruk">Kopi Tubruk Signature</option>
+          <option value="arabica">Kopi Arabica Kendal</option>
+          <option value="cold-brew">Cold Brew Aren</option>
+          <option value="bundling-duo">Paket Bundling Duo Kopi</option>
+          <option value="bundling-segar">Paket Bundling Segar Kendal</option>
+        </select>
+        <p id="paket-error" class="field-error" aria-live="polite"></p>
+      </div>
 
-      <input
-        type="radio"
-        id="topik-produk"
-        name="topik"
-        value="produk"
-        required
-      />
-      <label for="topik-produk">Produk</label>
+      <fieldset aria-describedby="topik-error">
+        <legend>Topik pertanyaan</legend>
 
-      <input
-        type="radio"
-        id="topik-pemesanan"
-        name="topik"
-        value="pemesanan"
-      />
-      <label for="topik-pemesanan">Pemesanan</label>
+        <input type="radio" id="topik-produk" name="topik" value="produk" required />
+        <label for="topik-produk">Produk</label>
 
-      <input
-        type="radio"
-        id="topik-lainnya"
-        name="topik"
-        value="lainnya"
-      />
-      <label for="topik-lainnya">Lainnya</label>
-    </fieldset>
+        <input type="radio" id="topik-pemesanan" name="topik" value="pemesanan" required />
+        <label for="topik-pemesanan">Pemesanan</label>
 
-    <label for="pesan">Pesan</label>
-    <textarea
-      id="pesan"
-      name="pesan"
-      rows="6"
-      required
-      minlength="10"
-    ></textarea>
+        <input type="radio" id="topik-lainnya" name="topik" value="lainnya" required />
+        <label for="topik-lainnya">Lainnya</label>
+      </fieldset>
+      <p id="topik-error" class="field-error" aria-live="polite"></p>
 
-<div class="form-actions">
-  <button type="submit">Kirim</button>
-</div>
+      <div class="field">
+        <label for="pesan">Pesan</label>
+        <textarea
+          id="pesan"
+          name="pesan"
+          rows="6"
+          required
+          minlength="20"
+          aria-describedby="pesan-hint pesan-error"
+        ></textarea>
+        <p id="pesan-hint" class="field-hint">Minimal 20 karakter.</p>
+        <p id="pesan-error" class="field-error" aria-live="polite"></p>
+      </div>
 
-  </form>
-  <section aria-labelledby="preview-title">
-  <h2 id="preview-title">Preview Data</h2>
-  <pre id="preview">Data form akan muncul di sini.</pre>
-</section>
+      <div class="field check-field">
+        <input
+          type="checkbox"
+          id="setuju"
+          name="setuju"
+          value="ya"
+          required
+          aria-describedby="setuju-error"
+        />
+        <label for="setuju">Saya setuju data pada form ini ditampilkan sebagai preview (data dummy).</label>
+        <p id="setuju-error" class="field-error" aria-live="polite"></p>
+      </div>
 
-</section>
-<section class="kontaksingkat-section">
-  <h2 id="kontak-title">Kontak Singkat</h2>
-  <p>
-    <a href="https://wa.me/628123456789?text=Halo%20Omah%20Kopi%20Kendal%2C%20saya%20ingin%20bertanya%20tentang%20produk%20kopi.">
-      Hubungi Omah Kopi Kendal via WhatsApp
-    </a>
+      <p id="form-feedback" class="form-feedback" aria-live="polite"></p>
+
+      <div class="form-actions">
+        <button type="submit">Kirim</button>
+      </div>
+    </form>
+
+    <section class="preference-panel" aria-labelledby="preferensi-title">
+      <h3 id="preferensi-title">Preferensi lokal</h3>
+      <p>Simpan paket, topik, dan waktu pilihanmu di browser ini (localStorage).</p>
+      <div class="preference-actions">
+        <button type="button" id="simpan-preferensi">Simpan Preferensi</button>
+        <button type="button" id="hapus-preferensi" class="ghost-button">Hapus Preferensi</button>
+      </div>
+      <p id="preferensi-status" class="form-feedback" aria-live="polite">Belum ada preferensi tersimpan.</p>
+    </section>
+
+    <section aria-labelledby="preview-title">
+      <h2 id="preview-title">Preview Data</h2>
+      <pre id="preview">Data form akan muncul di sini setelah semua isian valid.</pre>
+    </section>
+  </section>
+
+  <section class="kontaksingkat-section" aria-labelledby="kontak-singkat-title">
+    <h2 id="kontak-singkat-title">Kontak Singkat</h2>
+    <p>
+      <a href="https://wa.me/628123456789?text=Halo%20Omah%20Kopi%20Kendal%2C%20saya%20ingin%20bertanya%20tentang%20produk%20kopi.">
+        Hubungi Omah Kopi Kendal via WhatsApp
+      </a>
+    </p>
+  </section>
   </main>
 
   <footer class="site-footer">

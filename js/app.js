@@ -2,13 +2,13 @@
 
 const produkUmkm = [
   {
+    nama: "Kopi Robusta Kendal", kategori: "Kopi Lokal", harga: 22000, stok: 0, unggulan: true
+  },
+  {
     nama: "Kopi Tubruk Signature", kategori: "Kopi Tradisional", harga: 18000, stok: 12, unggulan: true
   },
   {
-    nama: "Cold Brew Aren", kategori: "Kopi Dingin", harga: 22000, stok: 4, unggulan: true
-  },
-  {
-    nama: "Kopi Robusta Kendal", kategori: "Kopi Lokal", harga: 22000, stok: 0, unggulan: false
+    nama: "Cold Brew Aren", kategori: "Kopi Dingin", harga: 22000, stok: 4, unggulan: false
   },
   {
     nama: "Kopi Arabica Kendal", kategori: "Kopi Arabica", harga: 20000, stok: 8, unggulan: false
